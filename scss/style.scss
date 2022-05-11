@@ -1,0 +1,104 @@
+@import "_variables.scss";
+@import "_boilerplate.scss";
+
+article {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: $primarycolor300;
+  max-width: 20.4375rem;
+  border-radius: 0.625rem;
+
+  // media queries
+  @media (min-width: $desktop-breakpoint) {
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: 58.75rem;
+    background-color: $primarycolor300;
+  }
+
+  &__imagesection {
+    position: relative;
+    background-image: url(/images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 7.5rem;
+    border-top-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+
+    // media queries
+    @media (min-width: $desktop-breakpoint) {
+      min-width: 45%;
+      border-top-left-radius: 0rem;
+      border-bottom-right-radius: 0.625rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+      background-color: $primarycolor200;
+      mix-blend-mode: color;
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+
+  &__textsection {
+    text-align: center;
+    padding: 1.75rem;
+
+    h3 {
+      font-size: 1.5625rem;
+      span {
+        color: $primarycolor200;
+      }
+    }
+
+    // media queries
+    @media (min-width: $desktop-breakpoint) {
+      padding: 3.125rem;
+      text-align: left;
+
+      h3 {
+        font-size: 2rem;
+      }
+    }
+
+    &--paragraph {
+      padding-top: 1.125rem;
+
+      // media queries
+      @media (min-width: $desktop-breakpoint) {
+        padding-top: 2.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    &--footer {
+      // media queries
+      @media (min-width: $desktop-breakpoint) {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding-top: 5rem;
+
+        h4 {
+          font-size: 1.75rem;
+        }
+      }
+
+      h4 {
+        padding-top: 1.125rem;
+      }
+    }
+  }
+}

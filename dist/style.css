@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(233deg, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+h3 {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+}
+
+h4 {
+  color: hsl(0deg, 0%, 100%);
+}
+
+p {
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 62.5rem) {
+  h3 {
+    font-size: 1.5625rem;
+  }
+}
+article {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: hsl(244deg, 38%, 16%);
+  max-width: 20.4375rem;
+  border-radius: 0.625rem;
+}
+@media (min-width: 62.5rem) {
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    min-width: 58.75rem;
+    background-color: hsl(244deg, 38%, 16%);
+  }
+}
+.card__imagesection {
+  position: relative;
+  background-image: url(/images/image-header-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 7.5rem;
+  border-top-right-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
+}
+@media (min-width: 62.5rem) {
+  .card__imagesection {
+    min-width: 45%;
+    border-top-left-radius: 0rem;
+    border-bottom-right-radius: 0.625rem;
+  }
+}
+.card__imagesection::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: hsl(277deg, 64%, 61%);
+  mix-blend-mode: color;
+  opacity: 1;
+  z-index: 10;
+}
+.card__textsection {
+  text-align: center;
+  padding: 1.75rem;
+}
+.card__textsection h3 {
+  font-size: 1.5625rem;
+}
+.card__textsection h3 span {
+  color: hsl(277deg, 64%, 61%);
+}
+@media (min-width: 62.5rem) {
+  .card__textsection {
+    padding: 3.125rem;
+    text-align: left;
+  }
+  .card__textsection h3 {
+    font-size: 2rem;
+  }
+}
+.card__textsection--paragraph {
+  padding-top: 1.125rem;
+}
+@media (min-width: 62.5rem) {
+  .card__textsection--paragraph {
+    padding-top: 2.5rem;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 62.5rem) {
+  .card__textsection--footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    padding-top: 5rem;
+  }
+  .card__textsection--footer h4 {
+    font-size: 1.75rem;
+  }
+}
+.card__textsection--footer h4 {
+  padding-top: 1.125rem;
+}/*# sourceMappingURL=style.css.map */
